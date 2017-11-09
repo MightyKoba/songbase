@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+{% extends "hombe-base.html" %}
+{% block title%}
+{% endblock %}
+  <h1>Those are the songs:</h1>
+  <ul>
+      {% for song in songs%}
+    <li>{{song}}</li>
+    {% endfor %}
+    <img src="static/img/LakersWordMark.png" alt="">
+  </ul>
+  

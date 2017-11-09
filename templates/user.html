@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+{% extends "hombe-base.html" %}
+{% block title%}
+{% endblock %}
+  <body>
+    {#this is jinja comments#}
+    <h1>this is the user page</h1>
+    {# if user_name == "ernest"#}
+    <h2>Hello, professor!</h2>
+    {# else %}
+    <h2>Hello, {{user_name}}</h2>
+    {% end if%}
+  </body>
