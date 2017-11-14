@@ -1,10 +1,15 @@
 from flask import Flask, render_template
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 
 @app.route('/')
 def idex():
     return render_template('index.html')
+
+@app.route('/form-demo')
+def form_demo():
+    return render_template('form-demo.html')
+
 
 @app.route('/user/<string:name>')
 def get_user(name):

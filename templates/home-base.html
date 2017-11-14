@@ -1,8 +1,21 @@
 <!DOCTYPE html>
-{% block page_content%}
+<html lang="en">
 
-{% extends "hombe-base.html" %}
-{% block title%}
-{% endblock %}
-    <h1>this is index with template reuse</h1>
-    {% endblock %}
+<head>
+  {% block head %}
+  <title>{% block title%}{% endblock%} - SongBase</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='img/songbase-favicon.png') }}" type="image/x-icon"/>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/songbase-favicon.png') }}" type="image/x-icon"/>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Songbase CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/songbase.css') }}">
+  {% endblock%}
+</head>
+</html>
